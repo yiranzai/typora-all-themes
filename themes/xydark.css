@@ -1,0 +1,143 @@
+@import 'xydark/codeblock.dark.css';
+@import 'night/mermaid.dark.css';
+@import 'xydark/sourcemode.dark.css';
+@import 'xylight.css';
+
+:root {
+  --accented-background-color: #464B5D;
+  --light-header-color: #a5a7bd; /* H1-H3 */
+  --select-text-bg-color: #295080;
+  --accent-color: rgb(120, 124, 136);
+  --dark-accent-color: #464B5D;
+  --background-color: #0F111A;
+  --font-color: #8F93A2;
+  --header-color: #EEFFFF; /* H4-H6 */
+  --border-color: #232629;
+  --link-color: #6699CC; 
+  --code-bg-color: #0C1420;
+  --hover-bg-color: #050505; 
+  --control-text-color: var(--font-color); 
+  --side-bar-bg-color: var(--background-color);
+  --control-text-hover-color: var(--header-color);
+  --item-hover-text-color: var(--header-color);
+  --item-hover-bg-color: var(--hover-bg-color); 
+  --bg-color: var(--background-color);
+  --text-color: var(--font-color);
+  --meta-content-color: var(--accent-color);
+  --md-char-color: var(--accent-color);
+  --window-border: 0px solid rgba(0,0,0,0);
+  --active-file-bg-color: var(--hover-bg-color);
+  --rawblock-edit-panel-bd: var(--code-background-color);
+}
+
+.outline-item:hover {
+  background-color: var(--hover-bg-color);
+}
+/* 
+#write {
+  cursor: -webkit-image-set(url("night/cursor.png") 1x, url("night/cursor@2x.png") 2x) 8 8, auto;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--light-header-color);
+}
+
+mark {
+  background: #b8b80a
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #141313;
+}
+
+sup.md-footnote {
+  background-color: var(--code-bg-color);
+  color: var(--font-color);
+}
+
+.md-before,
+.md-after {
+  color: var(--dark-accent-color);
+}
+
+table tr:nth-child(2n), thead {
+  background-color: #181c2d;
+}
+
+.md-url {
+  color: #C594C5;
+}
+
+/* UI */
+
+footer.ty-footer {
+  border-top: none;
+}
+
+.typora-sourceview-on #toggle-sourceview-btn {
+  background-color: var(--background-color);
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+  background-color: #181c2d;
+}
+
+
+/* Code */
+
+code, .md-fences {
+	padding: .5em;
+	background: #0F111A;
+	/* border: 1px solid #ccc; */
+	padding: .1em;
+	font-size: 0.9em;
+	margin-left: 0.2em;
+	margin-right: 0.2em;
+}
+
+.md-image>.md-meta {
+  color: var(--accent-color);
+}
+
+/* right click menu */
+.context-menu {
+  background-color: #141313;
+}
+
+.context-menu.dropdown-menu .divider {
+  background-color: #232629;
+}
+
+/* focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+  color: #4f525a !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+  opacity: #4f525a !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+  color: #4f525a;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+  color: #4f525a !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+  color: var(--light-header-color);
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+  color: #4f525a !important;
+}
