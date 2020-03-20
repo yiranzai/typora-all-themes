@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open%20Sans);
-@import "night/mermaid.dark.css";
-@import "night/codeblock.dark.css";
-@import "night/sourcemode.dark.css";
+@import "barfi/mermaid.dark.css";
+@import "barfi/codeblock.dark.css";
+@import "barfi/sourcemode.dark.css";
 
 :root {
   --bg-color: #1e1e1e;
@@ -43,10 +43,10 @@
   --sidebar-width: 270px;
 
   /* Side-bar file list */
-  --active-file-bg-color: rgb(13, 33, 62); 
+  --active-file-bg-color: #283139; 
   --active-file-text-color: #7c929e;
   --active-file-left-border-color: #7fa8f0;
-  --active-file-border-color: #777;
+  --active-file-border-color: rgba(91, 112, 130, 0.47);
   --focus-ring-color: #6eace2;
   --file-item-file-name-color: #7c929e;
   --file-item-summary: #616161;
@@ -209,8 +209,16 @@ strong {
   font-weight: 500;
 }
 
+i {
+  color: #71879a;
+}
+
+em {
+  color: #f8951d;
+}
+
 mark {
-  background: #A142F4;
+  background: #ace056;
 }
 
 blockquote {

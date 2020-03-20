@@ -555,7 +555,7 @@ header, .context-menu, .megamenu-content, footer {
 }
 
 .md-task-list-item>input {
-	margin-left: -1.6em;
+	margin-left: -1.7em;
 	margin-top: calc(1rem - 12px);
 }
 
@@ -577,4 +577,17 @@ input {
 .os-windows-7 strong,
 .os-windows-7 strong  {
 	font-weight: 760;
+}
+
+.ty-preferences .btn-default {
+	background: transparent;
+}
+
+.ty-preferences .window-header {
+	border-bottom: 1px dashed #202B33;
+	box-shadow: none;
+}
+
+#sidebar-loading-template, #sidebar-loading-template.file-list-item {
+	color: #777;
 }

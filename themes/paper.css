@@ -1,0 +1,186 @@
+:root {
+	--primary-color: #2875d9;
+}
+
+@font-face {
+	font-family: 'Computer Modern';
+	font-style: normal;
+	font-weight: normal;
+	src: url('./paper/cmunrm.ttf');
+}
+
+@font-face {
+	font-family: 'Computer Modern';
+	font-style: italic;
+	font-weight: normal;
+	src: url('./paper/cmunti.ttf');
+}
+
+@font-face {
+	font-family: 'Computer Modern';
+	font-style: normal;
+	font-weight: bold;
+	src: url('./paper/cmunbx.ttf');
+}
+
+@font-face {
+	font-family: 'Computer Modern';
+	font-style: italic;
+	font-weight: bold;
+	src: url('./paper/cmunbi.ttf');
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, #write {
+	font-family: 'Computer Modern';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Computer Modern';
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.8rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1.2rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+html {
+	font-size: 20px;
+}
+
+body, #write {
+	max-width: 914px;
+	text-align: justify;
+	display: block;
+	margin: auto;
+}
+
+p {
+	font-size: 1rem;
+}
+
+a {
+	color: var(--primary-color);
+}
+
+/* Stuff */
+
+sup.md-footnote {
+	background-color: transparent;
+	color: var(--primary-color);
+	padding: 1px;
+	margin: 0;
+}
+
+code, .md-fences, .sourceCode {
+	background: #f2f2f2;
+}
+
+.md-fences, pre.sourceCode {
+	font-size: .7em;
+	padding: .5rem;
+}
+
+.show-fences-line-number .md-fences {
+	padding-left: .5rem;
+}
+
+blockquote {
+	margin: 2rem .2rem;
+	padding: .3rem .5rem;
+	color: #6f6f6f;
+	border-left: .4rem solid gray;
+}
+
+blockquote p {
+	padding: .2rem 1.5rem;
+}
+
+mark {
+	background: yellow;
+}
+
+figure {
+	margin: .5rem auto;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+figcaption {
+	text-align: center;
+	margin: .5rem auto;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	margin: auto;
+}
+
+/* 
+    Print Mode and page breaks.
+    WkhtmlToPDF does not work on @print mode
+*/
+
+@media (max-width: 210mm) {
+	img {
+		max-height: 8cm;
+	}
+	html {
+		font-size: 16px;
+	}
+	div[title="pb"], page-break {
+		display: block;
+		page-break-after: always;
+		break-after: page;
+	}
+	nav {
+		font-size: .9rem;
+		page-break-after: always;
+		page-break-before: always;
+	}
+	nav a {
+		color: black;
+	}
+	/* Move top-level headings to a new page on the right-hand side: */
+	h1, h2 {
+		page-break-before: right;
+		break-before: recto;
+	}
+	/* Override the previous ruleset for the very first heading: */
+	h1:first-of-type, section>h1:first-child {
+		page-break-before: avoid;
+		break-before: avoid;
+	}
+	/* Headings should not be the last paragraph on a page: */
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after: avoid;
+	}
+	/* Consecutive headings with deepening level should not be split across pages: */
+	h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 {
+		page-break-before: avoid;
+	}
+}

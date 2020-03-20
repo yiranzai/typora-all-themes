@@ -24,7 +24,9 @@
     --item-hover-text-color: white;
     --primary-color: #6dc1e7;
 
-    --rawblock-edit-panel-bd: #4B535A;
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
 }
 
 html {
@@ -38,6 +40,7 @@ body {
     background: #363B40;
     background: var(--bg-color);
     fill: currentColor;
+    line-height: 1.625rem;
 }
 
 #write {
@@ -57,11 +60,11 @@ div.code-tooltip-content {
 
 div.code-tooltip,
 .md-hover-tip .md-arrow:after {
-    background: #4B535A;
+    background: #333;
 }
 
 .popover.bottom > .arrow:after {
-    border-bottom-color: #4B535A;
+    border-bottom-color: #333;
 }
 
 html,
@@ -70,8 +73,6 @@ button,
 input,
 select,
 textarea {
-    font-style: normal;
-    line-height: 1.625rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -310,9 +311,14 @@ code,
 kbd,
 tt,
 var {
-    background: rgba(0, 0, 0, 0.05);
     font-size: 0.875rem;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 kbd {
@@ -325,13 +331,14 @@ kbd {
 }
 
 pre.md-fences {
-    padding: 10px 30px;
+    padding: 10px 10px 10px 30px;
     margin-bottom: 20px;
-    border: 1px solid;
+    background: #333;
 }
 
-.md-fences .code-tooltip {
-    bottom: -3.2em;
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
 }
 
 .enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
@@ -446,11 +453,6 @@ td {
     font-size: 0.625rem;
     line-height: 0.625rem;
     color: #DEDEDE;
-}
-
-.CodeMirror-gutters {
-    background: transparent;
-    border-right: 1px solid transparent;
 }
 
 /** quick open **/
@@ -608,14 +610,8 @@ h6.md-focus .md-attr,
     opacity: 1;
 }
 
-.md-inline-math g,
 .md-inline-math svg {
-    stroke: #b8bfc6 !important;
-    fill: #b8bfc6 !important;
-}
-
-[md-inline='inline_math'] {
-    color: #9CB2E9;
+    color: #b8bfc6;
 }
 
 #math-inline-preview .md-arrow:after {
@@ -637,7 +633,6 @@ h6.md-focus .md-attr,
 }
 
 .modal-content .input-group-addon {
-    background-color: rgba(0, 0, 0, 0.17);
     color: white;
 }
 
@@ -650,7 +645,7 @@ h6.md-focus .md-attr,
 }
 
 .md-table-resize-popover {
-    background-color: #4B535A;
+    background-color: #333;
 }
 
 .form-inline .input-group .input-group-addon {
@@ -908,11 +903,84 @@ footer {
 
 .md-task-list-item>input {
     margin-left: -1.3em;
-    margin-top: calc(1rem - 10px);
+    margin-top: 0.3rem;
     -webkit-appearance: none;
 }
 
 .md-mathjax-midline {
     background-color: #57616b;
     border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
 }

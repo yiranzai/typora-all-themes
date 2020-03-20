@@ -190,13 +190,11 @@ table tr th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
-    text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
 table tr td {
     border: 1px solid #dfe2e5;
-    text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
@@ -237,7 +235,6 @@ code {
 .md-fences {
     margin-bottom: 15px;
     margin-top: 15px;
-    padding: 0.2em 1em;
     padding-top: 8px;
     padding-bottom: 6px;
 }
@@ -365,4 +362,13 @@ header, .context-menu, .megamenu-content, footer{
 
 .dropdown-menu .divider {
     border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
 }

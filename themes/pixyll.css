@@ -360,9 +360,10 @@ a {
 	height: 1.25rem;
 	display: block;
 	-webkit-appearance: initial;
-	top: -2px;
+	top: -0.2rem;
 	margin-left: -1.6em;
-    margin-top: calc(1rem - 7px);
+	margin-top: calc(1rem - 7px);
+	border: none;
 }
 
 .md-task-list-item > input:focus{
@@ -477,10 +478,6 @@ a {
 
 .cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
 	color: #777777;
-}
-
-.preference-item-hint {
-	margin-top: 16px;
 }
 
 .md-diagram-panel {
